@@ -43,16 +43,6 @@ public class GlobalException extends ResponseEntityExceptionHandler {
         return problemDetail;
     }
 
-//    @ExceptionHandler(NullExceptionClass.class)
-//    ProblemDetail problemDetail(NullExceptionClass exception) {
-//        ProblemDetail problemDetail = ProblemDetail.forStatusAndDetail(
-//                HttpStatus.BAD_REQUEST, exception.getMessage()
-//        );
-//        problemDetail.setTitle(exception.getTitle() + " Bad Request");
-//        problemDetail.setType(URI.create("localhost:8080/error/bad-request"));
-//        problemDetail.setProperty("timestamp", LocalDateTime.now());
-//        return problemDetail;
-//    }
 
     @ExceptionHandler(InternalServerErrorException.class)
     ProblemDetail problemDetail(InternalServerErrorException exception) {

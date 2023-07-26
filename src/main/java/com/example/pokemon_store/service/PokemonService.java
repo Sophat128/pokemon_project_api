@@ -14,7 +14,7 @@ public interface PokemonService {
     Document getDocumentFromURL(URL resourceUrl) throws IOException;
     List<Element> crawl(URL initialUrl, int maxVisits, String pageLinkSelectorQuery) throws IOException;
 
-    List<Pokemon> getAllDataPagination() throws IOException;
+    List<Pokemon> crawlAndInsertPokemonData() throws IOException;
 
     Pokemon addPokemon(Pokemon pokemonRequest);
 

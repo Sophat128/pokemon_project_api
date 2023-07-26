@@ -49,7 +49,7 @@ public class PokemonServiceImpl implements PokemonService {
     }
 
     @Override
-    public List<Pokemon> getAllDataPagination() throws IOException {
+    public List<Pokemon> crawlAndInsertPokemonData() throws IOException {
         String pageLinkCSSQuery = ".page-numbers>li>a";
         int maxVisits = 48;
         String firstPageUrl = "https://scrapeme.live/shop/page/1/";

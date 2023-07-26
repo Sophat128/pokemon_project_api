@@ -36,10 +36,10 @@ public class PokemonController {
         return ResponseEntity.ok().body(responseData);
     }
 
-    @GetMapping("/getAllDadaPagination")
-    public ResponseEntity<?> getAllDataPagination() throws IOException {
+    @PostMapping("/crawlAndInsertPokemonData")
+    public ResponseEntity<?> crawlAndInsertPokemonData() throws IOException {
         ResponseMessages<?> responseData = new ResponseMessages<>(
-                pokemonService.getAllDataPagination(),
+                pokemonService.crawlAndInsertPokemonData(),
                 true
         );
         return ResponseEntity.ok().body(responseData);
