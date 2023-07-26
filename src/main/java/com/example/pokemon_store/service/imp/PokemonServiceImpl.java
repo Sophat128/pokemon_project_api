@@ -110,7 +110,7 @@ public class PokemonServiceImpl implements PokemonService {
         updatePokemon.setType(requestPokemon.getType());
         updatePokemon.setImageUrl(requestPokemon.getImageUrl());
         updatePokemon.setAbilities(requestPokemon.getAbilities());
-        if(existName == null){
+        if(existName == null || Objects.equals(name, requestPokemon.getName())){
         return pokemonRepository.save(updatePokemon);
 
         }else{
